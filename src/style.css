@@ -1,0 +1,159 @@
+:root {
+  --gray-50: #fafafa;
+  --gray-100: #f4f4f5;
+  --gray-200: #e4e4e7;
+  --gray-300: #d4d4d8;
+  --gray-400: #a1a1aa;
+  --gray-500: #71717a;
+  --gray-600: #52525b;
+  --gray-700: #3f3f46;
+  --gray-800: #27272a;
+  --gray-900: #18181b;
+  --gray-950: #09090b;
+  --blue-50: #e8f4ff;
+  --blue-100: #d4ebff;
+  --blue-200: #b2d8ff;
+  --blue-300: #84bbff;
+  --blue-400: #548fff;
+  --blue-500: #2e63ff;
+  --blue-600: #0a32ff;
+  --blue-700: #0128ff;
+  --blue-800: #0528d6;
+  --blue-900: #0f2ba0;
+  --blue-950: #09175d;
+
+  font-family: "Barlow Semi Condensed", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
+  font-weight: 300;
+
+  color-scheme: light dark;
+  color: var(--gray-200);
+  background-color: var(--gray-900);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+strong {
+  font-weight: 700;
+}
+.section-heading {
+  position: absolute;
+  top: -2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.1rem;
+}
+
+/** INTRO **/
+.intro-section {
+  min-height: 97vh;
+  background-color: var(--blue-950);
+  background: linear-gradient(0deg, var(--blue-950) 0%, var(--blue-800) 100%);
+}
+.intro-grid {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+.hello {
+  margin: 2rem;
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Codystar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  animation: glowing-text 3s ease infinite;
+}
+.profile-image {
+  border-radius: 50%;
+  max-width: 250px;
+  margin: 0 auto 0 auto;
+  box-shadow: 1px 7px 15px 5px #00000057;
+}
+.intro-text {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 2rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "hello image"
+      "buttons intro";
+    max-width: 1222px;
+    margin: 0 auto;
+    padding-top: 25vh;
+  }
+  .hello {
+    grid-area: hello;
+    text-align: right;
+    margin: 0;
+    font-size: 4rem;
+  }
+  .profile-image {
+    margin: -132px 0 -60px -20px;
+  }
+  .intro-text {
+    position: relative;
+    grid-area: intro;
+    margin: 0;
+    margin-right: 2rem;
+    font-size: 2rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+  .intro-text span {
+    position: absolute;
+    left: -4rem;
+  }
+  .intro-text:first-line,
+  .intro-text span {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1024px) and (min-height: 820px) {
+  .intro-grid {
+    padding-top: 35vh;
+  }
+}
+
+/** PROJECTS SECTION **/
+.projects-section {
+  position: relative;
+  background-color: var(--gray-200);
+  color: var(--gray-800);
+  padding: 2rem;
+}
+.projects-section .section-heading {
+  color: var(--gray-200);
+}
+
+@keyframes glowing-text {
+  0% {
+    text-shadow: 0 0 10px var(--gray-300), 0 0 20px var(--gray-300),
+      0 0 30px var(--gray-300), 0 0 40px var(--gray-300),
+      0 0 70px var(--gray-300), 0 0 80px var(--gray-300);
+  }
+  50% {
+    text-shadow: 0 0 5px var(--gray-300), 0 0 10px var(--gray-300),
+      0 0 15px var(--gray-300), 0 0 20px var(--gray-300),
+      0 0 35px var(--gray-300), 0 0 40px var(--gray-300),
+      0 0 50px var(--gray-300);
+  }
+  100% {
+    text-shadow: 0 0 10px var(--gray-300), 0 0 20px var(--gray-300),
+      0 0 30px var(--gray-300), 0 0 40px var(--gray-300),
+      0 0 70px var(--gray-300), 0 0 80px var(--gray-300);
+  }
+}
