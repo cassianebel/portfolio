@@ -165,6 +165,38 @@
           </div>
         </div>
       </section>
+      <section class="contact-section">
+        <h2 class="section-heading">Contact Me</h2>
+        <div class="contact-grid">
+          <div>
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://cassia-proxy-server-0e93eb694b50.herokuapp.com/cassia/contact"
+              method="POST"
+            >
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+              <label for="message">Message</label>
+              <textarea id="message" name="message"></textarea>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+            <p id="form-status"></p>
+          </div>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/cassianebel/" class="btn">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>Connect on LinkedIn</span></a
+            >
+            <a href="mailto:cassia.nebel@gmail.com" class="btn">
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email Me!</span></a
+            >
+          </div>
+        </div>
+      </section>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>
