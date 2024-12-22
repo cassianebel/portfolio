@@ -274,6 +274,51 @@ a {
   }
 }
 
+/** REVIEWS SECTION **/
+.reviews-section {
+  position: relative;
+  padding: 6rem 2rem;
+  background: url("../public/fluid-light.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+.reviews-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+.review {
+  flex: 1 1 300px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--gray-500);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-200);
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
 @keyframes glowing-text {
   0% {
     text-shadow: 0 0 10px var(--gray-300), 0 0 20px var(--gray-300),
