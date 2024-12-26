@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cassia Nebel | Front End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Codystar:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b5099e8b92.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html#projects" class="back-link btn">
+        <i class="fa-solid fa-square-up-left"></i> <span>Back to Home</span>
+      </a>
+      <a href="/flash-focus.html" class="next-link btn">
+        <span>Next Project</span> <i class="fa-solid fa-square-right"></i>
+      </a>
+    </nav>
+    <main class="project-page">
+      <h1 class="project-page-heading">TRIVIAI</h1>
+      <div class="project-page-grid">
+        <div class="project-info">
+          <p>
+            TriviAI allows users to select a topic of their choice, the
+            difficulty level and number of questions then uses OpenAI’s GPT
+            model to generate the trivia questions dynamically.
+          </p>
+
+          <div class="project-links">
+            <a
+              href="https://cassianebel.github.io/trivia-with-openai/"
+              target="_blank"
+              class="btn blue"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/cassianebel/trivia-with-openai"
+              target="_blank"
+              class="btn pink"
+              >GitHub Repo</a
+            >
+          </div>
+          <h2>Features</h2>
+          <ul>
+            <li>
+              Dynamic Question Generation: Leverages OpenAI’s API to create
+              unique trivia questions for any topic you choose.
+            </li>
+            <li>
+              Customizable Features: Enter any topic, choose your difficulty
+              level and number of questions then watch the app generate engaging
+              trivia tailored to your choices.
+            </li>
+          </ul>
+          <h2>Technology</h2>
+          <ul>
+            <li>Frontend: React, Vite</li>
+            <li>Styling: TailwindCSS</li>
+            <li>API: OpenAI API</li>
+            <li>Deployment: GitHub Pages and Heroku Proxy Server</li>
+          </ul>
+        </div>
+        <div class="triviai-images-grid">
+          <div class="triviai-image-1">
+            <img src="./public/triviai-start.png" alt="TriviAI start screen" />
+          </div>
+          <div class="triviai-image-2">
+            <img
+              src="./public/triviai-question.png"
+              alt="TriviAI question screen"
+            />
+          </div>
+          <div class="triviai-image-3">
+            <img src="./public/triviai-score.png" alt="TriviAI score screen" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

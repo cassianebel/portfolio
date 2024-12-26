@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cassia Nebel | Front End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Codystar:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b5099e8b92.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/index.html#projects" class="back-link btn">
+        <i class="fa-solid fa-square-up-left"></i> <span>Back to Home</span>
+      </a>
+      <a href="/yumble.html" class="next-link btn">
+        <span>Next Project</span> <i class="fa-solid fa-square-right"></i>
+      </a>
+    </nav>
+    <main class="project-page">
+      <h1 class="project-page-heading">FLASH FOCUS</h1>
+      <div class="project-page-grid">
+        <div class="project-info">
+          <p>Flash Focus is an app for creating and studying flash cards.</p>
+
+          <div class="project-links">
+            <a
+              href="https://flash-focus-8cf3f22efbc1.herokuapp.com/"
+              target="_blank"
+              class="btn blue"
+              >Live Demo</a
+            >
+            <a
+              href="https://github.com/cassianebel/flash-focus"
+              target="_blank"
+              class="btn pink"
+              >GitHub Repo</a
+            >
+          </div>
+          <h2>Features</h2>
+          <ul>
+            <li>
+              User Authentication: Secure login and signup using Firebase
+              Authentication.
+            </li>
+            <li>Deck Management: Create, edit, and delete flashcard decks.</li>
+            <li>
+              Flexible Navigation: Move between cards with button clicks,
+              swiping, or keyboard shortcuts.
+            </li>
+            <li>
+              Dark and Light Mode: Switch between themes to match your preferred
+              visual setting.
+            </li>
+            <li>
+              Responsive Design: Fully optimized for desktop, tablet, and mobile
+              devices.
+            </li>
+          </ul>
+          <h2>Technology</h2>
+          <ul>
+            <li>Frontend: React, Vite</li>
+            <li>Styling: TailwindCSS</li>
+            <li>Authentication: Firebase Authentication</li>
+            <li>Backend: Firestore Database</li>
+            <li>Deployment: Heroku</li>
+          </ul>
+        </div>
+        <div class="flash-focus-images-grid">
+          <div class="flash-focus-image-1">
+            <img
+              src="./public/flash-focus-decks.png"
+              alt="Flash Focus decks screen"
+            />
+          </div>
+          <div class="flash-focus-image-2">
+            <img
+              src="./public/flash-focus-auth.png"
+              alt="Flash Focus sign in screen"
+            />
+          </div>
+          <div class="flash-focus-image-3">
+            <img
+              src="./public/flash-focus-edit.png"
+              alt="Flash Focus edit deck screen"
+            />
+          </div>
+          <div class="flash-focus-image-4">
+            <img
+              src="./public/flash-focus-deck.png"
+              alt="Flash Focus study deck screen"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
