@@ -1,15 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Smooth scroll to anchor links while keeping the heading in view
-  if (window.location.hash) {
-    const element = document.querySelector(window.location.hash);
-    if (element) {
-      setTimeout(() => {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-        window.scrollBy(0, -100); // Adjust this value to match the heading's offset
-      }, 0);
-    }
-  }
-
   // Add animation classes to elements when they come into view
   const observer = new IntersectionObserver(
     (entries) => {
@@ -64,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { threshold: 0.15 }
   );
 
+  // Select groups of elements to animate
   const animationGroups = document.querySelectorAll(".group-animation");
   animationGroups.forEach((group) => {
     observerGroup.observe(group);
