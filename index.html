@@ -24,7 +24,7 @@
           <img
             src="./public/cassia.jpg"
             alt="Cassia Nebel"
-            class="profile-image"
+            class="profile-image slide-down"
           />
           <p class="intro-text">
             <span>I’m</span> <strong>CASSIA NEBEL</strong>, a front-end
@@ -36,9 +36,9 @@
         </div>
       </section>
       <section class="projects-section" id="projects">
-        <h2 class="section-heading">Projects</h2>
-        <div class="projects-grid">
-          <a class="project-tile" href="/yumble.html">
+        <h2 class="section-heading slide-up">Projects</h2>
+        <div class="projects-grid group-animation">
+          <a class="project-tile scale-in" href="/yumble.html">
             <img
               src="./public/yumble-square.png"
               alt="Yumble landing page screenshot"
@@ -47,7 +47,7 @@
             <h3 class="project-heading">Yumble</h3>
             <p>recipe finding app</p>
           </a>
-          <a class="project-tile" href="/triviai.html">
+          <a class="project-tile scale-in" href="/triviai.html">
             <img
               src="./public/triviai-square.png"
               alt="Triviai start screenshot"
@@ -56,7 +56,7 @@
             <h3 class="project-heading">TriviAI</h3>
             <p>AI powered trivia game</p>
           </a>
-          <a class="project-tile" href="/flash-focus.html">
+          <a class="project-tile scale-in" href="/flash-focus.html">
             <img
               src="./public/flash-focus-square.png"
               alt="Flash Focus app screenshot"
@@ -67,8 +67,8 @@
           </a>
         </div>
       </section>
-      <section class="about-section">
-        <h2 class="section-heading">About Me</h2>
+      <section class="about-section" id="about">
+        <h2 class="section-heading slide-up">About Me</h2>
         <div class="about-grid">
           <div class="about-text">
             <p>
@@ -103,7 +103,11 @@
                 ><span>GitHub Profile</span>
               </a>
             </div>
-            <a class="project-tile light" href="https://www.unomaha.edu">
+            <a
+              class="project-tile light"
+              href="https://www.unomaha.edu"
+              target="_blank"
+            >
               <img src="./public/uno.png" alt="UNO homepage screenshot" />
               <h3 class="project-heading">unomaha.edu</h3>
               <p>The website I work on from Monday-Friday every week</p>
@@ -111,9 +115,10 @@
           </div>
         </div>
       </section>
-      <section class="reviews-section">
-        <div class="reviews-flex">
-          <div class="review">
+      <section class="reviews-section" id="reviews">
+        <h2 class="section-heading slide-up">Reviews</h2>
+        <div class="reviews-flex group-animation">
+          <div class="review scale-in">
             <p>
               Cassia is an extremely talented web developer. She has
               demonstrated the ability over the last year to jump into foreign
@@ -121,21 +126,21 @@
               meaningful improvements.
             </p>
           </div>
-          <div class="review">
+          <div class="review scale-in">
             <p>
               Cassia has maintained and/or exceeded output in a remote working
               environment. She has found a method of working remotely that is
               highly productive.
             </p>
           </div>
-          <div class="review">
+          <div class="review scale-in">
             <p>
               Cassia has exhibited her exceptional skill in managing multiple
               competing initiatives while still meeting our stakeholders'
               expectations for timely delivery.
             </p>
           </div>
-          <div class="review">
+          <div class="review scale-in">
             <p>
               Ms. Nebel is also a very skilled written communicator and her
               responses to stakeholders via electronic systems are thoroughly
@@ -143,7 +148,7 @@
             </p>
           </div>
 
-          <div class="review">
+          <div class="review scale-in">
             <p>
               The level of care and quality Cassia gives to deliverables is
               exemplary. I find it remarkable that we do not get that many
@@ -154,7 +159,7 @@
               2.0 guidelines.
             </p>
           </div>
-          <div class="review">
+          <div class="review scale-in">
             <p>
               Design and user experience are often the base metric used to judge
               software quality, and having her on the ITS team is critical to
@@ -165,8 +170,8 @@
           </div>
         </div>
       </section>
-      <section class="contact-section">
-        <h2 class="section-heading">Contact Me</h2>
+      <section class="contact-section" id="contact">
+        <h2 class="section-heading slide-up">Contact Me</h2>
         <div class="contact-grid">
           <div>
             <form
@@ -181,7 +186,10 @@
               <input type="email" id="email" name="email" />
               <label for="message">Message</label>
               <textarea id="message" name="message"></textarea>
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn">
+                <i class="fa-solid fa-paper-plane-top"></i
+                ><span>Send Message</span>
+              </button>
             </form>
             <p id="form-status"></p>
           </div>
@@ -200,5 +208,6 @@
       </section>
     </main>
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/form.js"></script>
   </body>
 </html>

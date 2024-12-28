@@ -18,15 +18,15 @@
   </head>
   <body>
     <nav>
-      <a href="/index.html#projects" class="back-link btn">
+      <a href="/index.html#projects" class="back-link btn slide-left">
         <i class="fa-solid fa-square-up-left"></i> <span>Back to Home</span>
       </a>
-      <a href="/flash-focus.html" class="next-link btn">
+      <a href="/flash-focus.html" class="next-link btn slide-right">
         <span>Next Project</span> <i class="fa-solid fa-square-right"></i>
       </a>
     </nav>
     <main class="project-page">
-      <h1 class="project-page-heading">TRIVIAI</h1>
+      <h1 class="project-page-heading slide-up">TRIVIAI</h1>
       <div class="project-page-grid">
         <div class="project-info">
           <p>
@@ -69,18 +69,27 @@
             <li>Deployment: GitHub Pages and Heroku Proxy Server</li>
           </ul>
         </div>
-        <div class="triviai-images-grid">
+        <div class="triviai-images-grid group-animation">
           <div class="triviai-image-1">
-            <img src="./public/triviai-start.png" alt="TriviAI start screen" />
+            <img
+              class="scale-in"
+              src="./public/triviai-start.png"
+              alt="TriviAI start screen"
+            />
           </div>
           <div class="triviai-image-2">
             <img
+              class="scale-in"
               src="./public/triviai-question.png"
               alt="TriviAI question screen"
             />
           </div>
           <div class="triviai-image-3">
-            <img src="./public/triviai-score.png" alt="TriviAI score screen" />
+            <img
+              class="scale-in"
+              src="./public/triviai-score.png"
+              alt="TriviAI score screen"
+            />
           </div>
         </div>
       </div>

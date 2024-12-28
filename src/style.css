@@ -239,18 +239,18 @@ a.light:not(.btn) {
 }
 .project-tile {
   text-align: center;
-  transform: scale(0.9);
+  transform: scale(1);
   filter: brightness(0.7);
   transition: all 0.3s ease;
+  margin: 1rem;
 }
 @media (hover: none) and (pointer: coarse) {
   .project-tile {
-    transform: scale(1);
     filter: brightness(1);
   }
 }
 .project-tile:hover {
-  transform: scale(1);
+  transform: scale(1.1);
   filter: brightness(1);
 }
 .project-heading {
@@ -271,10 +271,11 @@ a.light:not(.btn) {
 /** ABOUT SECTION **/
 .about-section {
   position: relative;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 6rem 2rem;
 }
 .about-section .section-heading {
   color: var(--gray-900);
+  right: 16%;
 }
 .about-grid {
   display: grid;
@@ -319,10 +320,21 @@ a.light:not(.btn) {
 /** REVIEWS SECTION **/
 .reviews-section {
   position: relative;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 8rem 2rem;
   background: url("../public/fluid-light.jpg");
   background-size: cover;
   background-position: center;
+}
+.reviews-section .section-heading {
+  background: url("../public/fluid-light.jpg") no-repeat center center;
+  background-size: auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  top: -3.1rem;
+  left: 50%;
+  translate: -50%;
 }
 .reviews-grid {
   display: grid;
@@ -343,7 +355,7 @@ a.light:not(.btn) {
   flex: 1 1 300px;
   backdrop-filter: blur(15px);
   background-color: rgba(255, 255, 255, 0.15);
-  color: var(--gray-500);
+  color: var(--gray-600);
   padding: 2rem;
   border-radius: 0.5rem;
   border: 1px solid var(--gray-200);
@@ -368,6 +380,7 @@ a.light:not(.btn) {
 }
 .contact-section .section-heading {
   color: var(--gray-900);
+  left: 15%;
 }
 .contact-grid {
   display: grid;
@@ -527,6 +540,43 @@ nav {
   }
 }
 
+/** ANIMATIONS **/
+.slide-up {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.slide-up.visible {
+  animation: slideUp 0.5s forwards 0.4s;
+}
+.slide-left {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.slide-left.visible {
+  animation: slideLeft 0.5s forwards;
+}
+.slide-right {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.slide-right.visible {
+  animation: slideRight 0.5s forwards;
+}
+.slide-down {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.slide-down.visible {
+  animation: slideDownBounce 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+.scale-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.scale-in.visible {
+  animation: scaleIn 0.5s forwards 0.4s;
+}
+
 @keyframes glowing-text {
   0% {
     text-shadow: 0 0 10px var(--gray-300), 0 0 20px var(--gray-300),
@@ -579,5 +629,67 @@ nav {
   }
   100% {
     box-shadow: 0 0 14px var(--blue-300);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDownBounce {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
