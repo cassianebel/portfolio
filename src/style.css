@@ -158,10 +158,6 @@ nav {
   backdrop-filter: blur(20px);
   z-index: 1000;
 }
-nav.project-nav {
-  position: relative;
-  backdrop-filter: unset;
-}
 nav a:not(.btn) {
   background: unset;
   -webkit-background-clip: unset;
@@ -179,6 +175,13 @@ a.home-link {
   gap: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
+}
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 6rem auto 0 auto;
 }
 .next-link {
   text-align: right;
