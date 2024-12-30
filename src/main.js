@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const links = document.querySelectorAll("nav a");
+  const navbar = document.querySelector("nav");
+  const navbarHeight = navbar.offsetHeight;
+
+  window.addEventListener("scroll", () => {
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= navbarHeight && rect.bottom >= navbarHeight) {
+        // Section is at or below the navbar
+        let linkColor = "white";
+        if (["projects", "reviews"].includes(section.id)) {
+          linkColor = "black";
+        }
+
+        links.forEach((link) => {
+          if (link.href.includes(section.id)) {
+            link.style.color = "#de24a0";
+          } else {
+            link.style.color = linkColor;
+          }
+        });
+      }
+    });
+  });
+
   // Add animation classes to elements when they come into view
   const observer = new IntersectionObserver(
     (entries) => {

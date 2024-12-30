@@ -127,6 +127,10 @@ a.light:not(.btn) {
 .btn:focus {
   animation: glowing-btn 3s ease infinite;
 }
+.btn:focus {
+  outline: 2px solid var(--pink-600);
+  outline-offset: -1px;
+}
 .btn.pink {
   color: var(--pink-700);
   border: 2px solid var(--pink-600);
@@ -147,7 +151,8 @@ a.light:not(.btn) {
 /** NAVIGATION **/
 nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 1rem;
@@ -158,12 +163,23 @@ nav {
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+}
 nav a:not(.btn) {
   background: unset;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  color: var(--pink-600);
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.25rem 0.5rem;
+}
+nav a:not(.btn):focus {
+  outline: 1px solid var(--pink-600);
+  outline-offset: 3px;
 }
 a.home-link {
   font-size: 1.5rem;
@@ -197,7 +213,7 @@ a.home-link {
 .intro-grid {
   display: flex;
   flex-direction: column;
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 .hello {
   margin: 2rem;
@@ -298,6 +314,12 @@ a.home-link {
 .project-tile:hover {
   transform: scale(1.1);
   filter: brightness(1);
+}
+.project-tile:focus {
+  transform: scale(1.1);
+  filter: brightness(1);
+  outline: 2px solid var(--pink-600);
+  outline-offset: 0;
 }
 .project-heading {
   margin-top: 1rem;
@@ -458,6 +480,11 @@ textarea {
   background-color: var(--gray-800);
   border: 1px solid var(--gray-600);
   border-radius: 0.4rem;
+}
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--pink-600);
+  outline-offset: -1px;
 }
 button[type="submit"] {
   margin: 2rem 0 0 0;
