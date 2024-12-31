@@ -97,6 +97,11 @@ a:not(.btn) {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  border-bottom: 2px solid transparent;
+}
+a:not(.btn):hover {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, var(--blue-600), var(--pink-600)) 1;
 }
 a.light:not(.btn) {
   background: linear-gradient(90deg, var(--blue-400), var(--pink-400));
@@ -173,6 +178,7 @@ nav a:not(.btn) {
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
+  text-decoration: none;
   color: white;
   border-radius: 0.3rem;
   padding: 0.25rem 0.5rem;

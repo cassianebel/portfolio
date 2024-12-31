@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (rect.top <= navbarHeight && rect.bottom >= navbarHeight) {
         // Section is at or below the navbar
         let linkColor = "white";
-        if (["projects", "reviews"].includes(section.id)) {
+        if (["projects", "reviews", "feature"].includes(section.id)) {
           linkColor = "black";
         }
 
