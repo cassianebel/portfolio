@@ -16,7 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         links.forEach((link) => {
           if (link.href.includes(section.id)) {
-            link.style.color = "#de24a0";
+            if (["projects", "reviews"].includes(section.id)) {
+              link.style.color = "#c11582";
+            } else {
+              link.style.color = "#f670d4";
+            }
           } else {
             link.style.color = linkColor;
           }
